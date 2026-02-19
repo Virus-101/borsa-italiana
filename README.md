@@ -8,8 +8,9 @@ A real-time Italian stock market terminal built with React + Electron.
 - Node.js 18+ installed on your machine
 ```bash
 
-### 1. Install dependencies
+1. Install dependencies
 npm install
+
 2. Run in development mode (instant preview)
 npm start
 This opens the app as a native desktop window.
