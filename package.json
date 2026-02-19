@@ -1,0 +1,57 @@
+{
+  "name": "borsa-italiana",
+  "version": "1.0.0",
+  "description": "Live Italian Stock Market Terminal",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron": "electron .",
+    "start": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "dist": "vite build && electron-builder"
+  },
+  "build": {
+    "appId": "com.borsaitaliana.terminal",
+    "productName": "Borsa Italiana",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.finance",
+      "icon": "electron/icon.icns"
+    },
+    "win": {
+      "icon": "electron/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "electron/icon.png",
+      "target": "AppImage"
+    }
+  },
+  "keywords": [
+    "stocks",
+    "finance",
+    "italy"
+  ],
+  "author": "Mohamed",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.1",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.4.1",
+    "wait-on": "^8.0.5"
+  },
+  "dependencies": {
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.4"
+  }
+}
