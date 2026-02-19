@@ -6,9 +6,9 @@ A real-time Italian stock market terminal built with React + Electron.
 
 ### Prerequisites
 - Node.js 18+ installed on your machine
+```bash
 
 ### 1. Install dependencies
-```bash
 npm install
 2. Run in development mode (instant preview)
 npm start
